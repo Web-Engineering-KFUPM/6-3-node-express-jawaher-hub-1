@@ -20,7 +20,10 @@ app.get("/", (req, res) => {
 // TODO 6.2: Create "/api/quote" route
 app.get("/api/quote", (req, res) => {
   const quote = getRandomQuote();
-  res.json({ quote });
+  res.json({quote});
 });
 
 // TODO 7: Start server using app.listen
+app.listen(PORT, () => {
+  console.log(`server running on ${PORT}`);
+});
