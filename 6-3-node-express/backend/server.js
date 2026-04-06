@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 });
 
 // TODO 6.2: Create "/api/quote" route
+import { getRandomQuote } from "./quotes.js";
 app.get("/api/quote", (req, res) => {
   const quote = getRandomQuote();
   res.json({quote});
@@ -25,5 +26,5 @@ app.get("/api/quote", (req, res) => {
 
 // TODO 7: Start server using app.listen
 app.listen(PORT, () => {
-  console.log(`server running on ${PORT}`);
+  console.log(`server is running http://localhost:${PORT}`);
 });
